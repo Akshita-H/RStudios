@@ -3,6 +3,7 @@ use_git()
 use_github()
 getwd()
 
+#Different types of data types
 #Example of matrix
 mat <- matrix(1:100,nrow=10)
 mat
@@ -52,5 +53,32 @@ seqofnum
 mat[3,1] ="true"
 mat
 
-library(usethis)
-use_git()
+#Vector examples
+vec1 <- 1:10
+vec2 <- seq(1,100,10)
+vec3 <- seq(1,2, length.out=10)
+length(vec1)
+length(vec2)
+length(vec3)
+?cbind
+
+#Another way to use matrix
+matrix1 <- cbind(vec1,vec2,vec3)
+matrix1
+typeof(matrix1)
+#Vector
+sample <- c("sample1","sample2","sample3","sample4","sample5","sample6","sample7",
+            "sample8","sample9","sample10")
+#Inside the above vector we'll add data frame
+df1 <- cbind(sample, matrix1)
+df1
+typeof(df1)
+df1 <- data.frame(sample, matrix1)
+df1
+list <- list["a", df1, sample, vec1]
+df1[,2]*10
+typeof(df1[,1])
+typeof(df1[,2])
+?read.table
+matrix1 <- data.frame(vec1,vec2,vec3)
+matrix1
