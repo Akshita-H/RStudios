@@ -83,6 +83,7 @@ typeof(df1[,2])
 matrix1 <- data.frame(vec1,vec2,vec3)
 matrix1
 
+#24th July 2026
 #while example
 i = 1
 while(i<10){
@@ -168,5 +169,72 @@ while(i<10){
     }
   }
 
+#for example
+for (data in 1:10){
+    print(data)
+}
 
+#for with if-else example
+  for (data in 1:10){
+    if (data < 5){
+    print(paste (data, "is accessed & is less than 5"))
+    }
+    else {
+      print(paste( data, "was not accessed"))
+    }
+  }
 
+  for (data in 1:10){
+    if (data < 5){
+      print(paste(data, "is accessed & is less than 5"))
+    }
+    else if (data %% 2==0){
+      print(paste(data, " > 5 and is even"))
+    }
+    else {
+      print(paste(data, "is still not accessed"))
+    }
+}
+
+  for (data in 1:10){
+    if (data < 5){
+      print(paste(data, "is accessed & is less than 5"))
+    }
+    if (data %% 2==0){
+      print(paste(data, " > 5 and is even"))
+    }
+    else {
+      print(paste(data, "is still not accessed"))
+    }
+  }
+
+#functions example
+#calling the length function
+  charnum <- function(argument){
+    length(argument)
+  }
+
+  charnum(c(6:28))
+
+  vec1 <- seq(1,2,length.out=100)
+  numitem <- function(argument){
+    length(argument)
+  }
+
+  numitem(vec1)
+
+  numchar <- function(argument){
+    nchar(argument)
+  }
+  numchar("dsbfhsfhgshfgsmbfmsdbv")
+
+  num1 <- 1
+  num2 <- 2
+
+  power <- function(arg1=0, arg2=1){
+    arg1^arg2
+  }
+
+  power()
+  seq(1,3)
+  seq(1)
