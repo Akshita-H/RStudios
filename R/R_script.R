@@ -238,3 +238,4 @@ for (data in 1:10){
   power()
   seq(1,3)
   seq(1)
+  power(arg2=num1,arg1=num2)
