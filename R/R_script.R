@@ -82,3 +82,91 @@ typeof(df1[,2])
 ?read.table
 matrix1 <- data.frame(vec1,vec2,vec3)
 matrix1
+
+#while example
+i = 1
+while(i<10){
+  i=i+1
+  print(i)
+}
+
+i = 0
+while(i<10){
+  print(paste(i,"before incrementing"))
+  i=i+1
+  print(paste(i,"after incrementing"))
+}
+
+i = 0
+while(i<10){
+  print(paste(i,"th iteration: before incrementing"))
+  i=i+1
+  print(paste(i,"th iteration: after incrementing"))
+}
+
+i = 0
+while(i<10){
+  print(paste(i+1,"th iteration: before incrementing"))
+  i=i+1
+  print(paste(i,"th iteration: after incrementing"))
+}
+
+i = 0
+while(i<10){
+  print(paste(i+1,"th iteration: before incrementing i=", i))
+  i=i+1
+  print(paste(i,"th iteration: after incrementing i=", i))
+}
+
+i = 0
+while(i<10){
+  if(i+1 == 1)
+  print(paste(i+1,"st iteration: before incrementing i=", i))
+}
+  {if(i+1 == 2)
+    print(paste(i+1,"nd iteration: before incrementing i=", i))
+}
+  i=i+1
+  {if(i+1 == 3)
+    print(paste(i+1,"rd iteration: before incrementing i=", i))
+  }
+
+#while with if-else example
+  i = 0
+  while (i<10){
+    i = i+1
+    if(i%%2==0){ #divisibility by 2
+      print(paste(i, "is even"))
+    }
+    else{
+      print(paste(i, "is odd"))
+    }
+  }
+
+  i = 0
+  for (i in 1:10){
+    #i = i+1
+    if(i%%2==0){ #divisibility by 2
+      print(paste(i, "is even"))
+    }
+    else{
+      print(paste(i, "is odd"))
+    }
+  }
+
+  i = 0
+  for (i in 1:10){
+    #i = i+1
+    if((i%%2==0) && (i%%3==0)){
+      print(paste(i, "is divisible by 2 & 3"))
+    }
+    if(i%%2==0){ #divisibility by 2
+      print(paste(i, "is divisible by 2"))
+    }
+    if(i%%3==0){ #divisibility by 2
+      print(paste(i, "is divisible by 3"))
+    }
+  }
+
+
+
