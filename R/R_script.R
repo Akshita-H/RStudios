@@ -239,3 +239,36 @@ for (data in 1:10){
   seq(1,3)
   seq(1)
   power(arg2=num1,arg1=num2)
+
+#27th July 2026
+#variable again
+a=10
+typeof(a)
+class(a)
+b=c(10,11,12)
+class(b)
+d=c("college", "students", "Tables")
+class(d)
+bull=b==d
+b==d
+
+#function again
+equality <- function(r1,r2){
+  r1==r2
+}
+ equality(b,d)
+
+#required packages
+library(tidyverse)
+install.packages("tidyverse")
+library(tidyverse)
+library(ggthemes)
+install.packages("stringi")
+library(stringi)
+
+install.packages("palmerpenguins")
+library(palmerpenguins)
+palmerpenguins::penguins
+penguins
+view(penguins)
+glimpse(penguins)
