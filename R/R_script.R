@@ -272,3 +272,66 @@ palmerpenguins::penguins
 penguins
 view(penguins)
 glimpse(penguins)
+
+#How to make plots
+ggplot(data = penguins,
+       mapping = aes(x = flipper_length_mm, y = body_mass_g)
+       ) +
+  geom_point()
+
+num <- 1:100
+squares <- num * num
+
+customdata <- data.frame(cbind(num, squares))
+class(customdata)
+ggplot(data = customdata,
+       mapping = aes(x = num, y = squares)
+) +
+  geom_point()
+
+customdata <- data.frame(cbind(num, squares))
+class(customdata)
+ggplot(data = customdata,
+       mapping = aes(x = num, y = num)
+) +
+  geom_point()
+
+ggplot(data = penguins,
+       mapping = aes(x = flipper_length_mm, y = body_mass_g, color = species)
+) +
+  geom_point() +
+  geom_smooth(method = "lm")
+
+#species color
+ggplot(data = penguins,
+       mapping = aes(x = flipper_length_mm, y = body_mass_g)
+) +
+  geom_point(mapping = aes(color = species)) +
+  geom_smooth(method = "lm")
+
+#species shape
+ggplot(data = penguins,
+       mapping = aes(x = flipper_length_mm, y = body_mass_g)
+) +
+  geom_point(mapping = aes(color = species, shape = species)) +
+  geom_smooth(method = "lm")
+
+#labels
+ggplot(data = penguins,
+       mapping = aes(x = flipper_length_mm, y = body_mass_g)
+) +
+  geom_point(mapping = aes(color = species, shape = species)) +
+  geom_smooth(method = "lm") +
+  labs(
+    title = "Body mass and flipper length",
+    subtitle = "Dimensions for Adelie, Chinstrap, and Gentoo Penguins",
+    x = "Flipper length (mm)", y = "Body mass (g)",
+    color = "Species", shape = "Species"
+  ) +
+  scale_color_colorblind() #for color blindness
+
+
+
+
+
+
