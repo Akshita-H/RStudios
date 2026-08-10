@@ -329,3 +329,68 @@ ggplot(data = penguins,
     color = "Species", shape = "Species"
   ) +
   scale_color_colorblind() #for color blindness
+
+# 10th Aug 2026
+
+y <- 1:10
+typeof(y)
+class(y)
+
+# matrix
+a <- matrix(56)
+a[1,1]
+a
+
+# atomic vectors (all the data points and in the same vector)
+dbl_var <- c(1,2,4)
+typeof(dbl_var)
+dbl_var <- c(1L,2L,4L)
+typeof(dbl_var)
+dbl_var <- c(1L,2L,4)
+typeof(dbl_var)
+dbl_var <- c(1L,2L,4,"A")
+typeof(dbl_var)
+
+dbl_var <- c(1, c(2, c(3, 4)))
+dbl_var2 <- c(1,2,3,4)
+dbl_var == dbl_var2
+class(dbl_var == dbl_var2)
+class(dbl_var == dbl_var2) == "logical"
+is.logical(dbl_var == dbl_var2)
+
+dbl_var2 <- c(1L,2L,3L,4)
+is.integer(dbl_var2)
+is.double(dbl_var2)
+is.atomic(dbl_var2)
+
+# coercion (changing the data type of an existing data) (mostly happens automatically)
+x <- c(FALSE, FALSE, TRUE)
+typeof(x)
+as.character(x)
+as.numeric(x)
+typeof(sum(x))
+typeof(mean(x))
+
+# list
+x <- list(1:3, "a", c(TRUE, FALSE, TRUE), c(2.3, 5.9))
+str(x)
+View(x)
+x[[1]][2]
+
+# nested list
+x <- list(list(list(list())))
+str(x)
+
+x <- list(list(1,2), c(3,4))
+y <- c(list(1,2), c(3,4))
+str(x)
+str(y)
+x
+y
+
+# Attributes (used to store meta data)
+y <- 1:10
+str(y)
+attr(y, "my_attribute")
+attr(y, "my_attribute") <- "This is a vector"   #this is how you explain your data to others
+attr(y, "my_attribute")
