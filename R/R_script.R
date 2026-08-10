@@ -394,3 +394,46 @@ str(y)
 attr(y, "my_attribute")
 attr(y, "my_attribute") <- "This is a vector"   #this is how you explain your data to others
 attr(y, "my_attribute")
+
+attributes(y[1])
+str(y)
+
+# Names
+x <- c(a = 1, b = 2, c = 3)
+y <- 1:3
+names(y) <- c("a", "b", "c")
+
+# Factors
+x <- factor(c("a", "b", "b", "a"))
+x
+
+sex_char <- c("m", "m", "m")
+sex_factor <- factor(sex_char, levels = c("m", "f"))
+table(sex_char)
+table(sex_factor)
+
+z <- read.csv(text = "value\n12\n1\n.\n9")
+z
+typeof(z$value)
+as.double(z$value)
+
+z <- read.csv(text = "value\n12\n1\n.\n9", na.strings=".")
+typeof(z$value)
+z
+
+# Matrices
+a <- matrix(1:6, ncol = 3, nrow = 2)
+a
+length(a)
+dim(a)
+
+# List
+l <- list(1:3, "a", TRUE, 1.0)
+dim(l) <- c(2, 2)
+l
+
+# Creation
+df <- data.frame(x = 1:3, y = c("a", "b", "c"))
+typeof(df)
+class(df)
+str(df)
