@@ -329,9 +329,3 @@ ggplot(data = penguins,
     color = "Species", shape = "Species"
   ) +
   scale_color_colorblind() #for color blindness
-
-
-
-
-
-
