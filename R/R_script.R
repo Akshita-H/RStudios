@@ -437,3 +437,16 @@ df <- data.frame(x = 1:3, y = c("a", "b", "c"))
 typeof(df)
 class(df)
 str(df)
+
+# 11th Aug 2026
+setRepositories()
+
+if (!require("BiocManager", quietly = TRUE))
+  install.packages("BiocManager")
+BiocManager::install(version = "3.23")
+BiocManager::install(c("GenomicFeatures", "AnnotationDbi"))
+BiocManager::available()
+BiocManager::install()
+BiocManager::valid()
+library(BiocManager)
+?BiocManager::available()
