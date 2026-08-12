@@ -122,123 +122,123 @@ while(i<10){
 i = 0
 while(i<10){
   if(i+1 == 1)
-  print(paste(i+1,"st iteration: before incrementing i=", i))
+    print(paste(i+1,"st iteration: before incrementing i=", i))
 }
-  {if(i+1 == 2)
-    print(paste(i+1,"nd iteration: before incrementing i=", i))
+{if(i+1 == 2)
+  print(paste(i+1,"nd iteration: before incrementing i=", i))
 }
-  i=i+1
-  {if(i+1 == 3)
-    print(paste(i+1,"rd iteration: before incrementing i=", i))
-  }
+i=i+1
+{if(i+1 == 3)
+  print(paste(i+1,"rd iteration: before incrementing i=", i))
+}
 
 #while with if-else example
-  i = 0
-  while (i<10){
-    i = i+1
-    if(i%%2==0){ #divisibility by 2
-      print(paste(i, "is even"))
-    }
-    else{
-      print(paste(i, "is odd"))
-    }
+i = 0
+while (i<10){
+  i = i+1
+  if(i%%2==0){ #divisibility by 2
+    print(paste(i, "is even"))
   }
+  else{
+    print(paste(i, "is odd"))
+  }
+}
 
-  i = 0
-  for (i in 1:10){
-    #i = i+1
-    if(i%%2==0){ #divisibility by 2
-      print(paste(i, "is even"))
-    }
-    else{
-      print(paste(i, "is odd"))
-    }
+i = 0
+for (i in 1:10){
+  #i = i+1
+  if(i%%2==0){ #divisibility by 2
+    print(paste(i, "is even"))
   }
+  else{
+    print(paste(i, "is odd"))
+  }
+}
 
-  i = 0
-  for (i in 1:10){
-    #i = i+1
-    if((i%%2==0) && (i%%3==0)){
-      print(paste(i, "is divisible by 2 & 3"))
-    }
-    if(i%%2==0){ #divisibility by 2
-      print(paste(i, "is divisible by 2"))
-    }
-    if(i%%3==0){ #divisibility by 2
-      print(paste(i, "is divisible by 3"))
-    }
+i = 0
+for (i in 1:10){
+  #i = i+1
+  if((i%%2==0) && (i%%3==0)){
+    print(paste(i, "is divisible by 2 & 3"))
   }
+  if(i%%2==0){ #divisibility by 2
+    print(paste(i, "is divisible by 2"))
+  }
+  if(i%%3==0){ #divisibility by 2
+    print(paste(i, "is divisible by 3"))
+  }
+}
 
 #for example
 for (data in 1:10){
-    print(data)
+  print(data)
 }
 
 #for with if-else example
-  for (data in 1:10){
-    if (data < 5){
+for (data in 1:10){
+  if (data < 5){
     print(paste (data, "is accessed & is less than 5"))
-    }
-    else {
-      print(paste( data, "was not accessed"))
-    }
   }
-
-  for (data in 1:10){
-    if (data < 5){
-      print(paste(data, "is accessed & is less than 5"))
-    }
-    else if (data %% 2==0){
-      print(paste(data, " > 5 and is even"))
-    }
-    else {
-      print(paste(data, "is still not accessed"))
-    }
+  else {
+    print(paste( data, "was not accessed"))
+  }
 }
 
-  for (data in 1:10){
-    if (data < 5){
-      print(paste(data, "is accessed & is less than 5"))
-    }
-    if (data %% 2==0){
-      print(paste(data, " > 5 and is even"))
-    }
-    else {
-      print(paste(data, "is still not accessed"))
-    }
+for (data in 1:10){
+  if (data < 5){
+    print(paste(data, "is accessed & is less than 5"))
   }
+  else if (data %% 2==0){
+    print(paste(data, " > 5 and is even"))
+  }
+  else {
+    print(paste(data, "is still not accessed"))
+  }
+}
+
+for (data in 1:10){
+  if (data < 5){
+    print(paste(data, "is accessed & is less than 5"))
+  }
+  if (data %% 2==0){
+    print(paste(data, " > 5 and is even"))
+  }
+  else {
+    print(paste(data, "is still not accessed"))
+  }
+}
 
 #functions example
 #calling the length function
-  charnum <- function(argument){
-    length(argument)
-  }
+charnum <- function(argument){
+  length(argument)
+}
 
-  charnum(c(6:28))
+charnum(c(6:28))
 
-  vec1 <- seq(1,2,length.out=100)
-  numitem <- function(argument){
-    length(argument)
-  }
+vec1 <- seq(1,2,length.out=100)
+numitem <- function(argument){
+  length(argument)
+}
 
-  numitem(vec1)
+numitem(vec1)
 
-  numchar <- function(argument){
-    nchar(argument)
-  }
-  numchar("dsbfhsfhgshfgsmbfmsdbv")
+numchar <- function(argument){
+  nchar(argument)
+}
+numchar("dsbfhsfhgshfgsmbfmsdbv")
 
-  num1 <- 1
-  num2 <- 2
+num1 <- 1
+num2 <- 2
 
-  power <- function(arg1=0, arg2=1){
-    arg1^arg2
-  }
+power <- function(arg1=0, arg2=1){
+  arg1^arg2
+}
 
-  power()
-  seq(1,3)
-  seq(1)
-  power(arg2=num1,arg1=num2)
+power()
+seq(1,3)
+seq(1)
+power(arg2=num1,arg1=num2)
 
 #27th July 2026
 #variable again
@@ -256,7 +256,7 @@ b==d
 equality <- function(r1,r2){
   r1==r2
 }
- equality(b,d)
+equality(b,d)
 
 #required packages
 library(tidyverse)
@@ -276,7 +276,7 @@ glimpse(penguins)
 #How to make plots
 ggplot(data = penguins,
        mapping = aes(x = flipper_length_mm, y = body_mass_g)
-       ) +
+) +
   geom_point()
 
 num <- 1:100
@@ -450,3 +450,42 @@ BiocManager::install()
 BiocManager::valid()
 library(BiocManager)
 ?BiocManager::available()
+
+# 12th Aug 20126
+
+BiocManager::install("Biostrings")
+BiocManager::install("Biostrings",force = TRUE)
+library(Biostrings)
+
+b <- BString("I am a BString object")
+b
+str(b)
+length(b)
+
+d <- DNAString("TTGAAAA-CTC-NWSHBD")    #only valid DNA characters
+d
+length(d)
+length(d[3])
+d[3]
+d[1:3]                                 #can create codons by subseq
+d[length(d):1]                         #how to get inverse sequence
+
+DNAseq <- DNAString("GTACGTCATACGTCGATGTCTAGCACTAG")
+for (i in 1:6) {
+  print(DNAseq[(3*i - 2):(3*i)])      #question-from the DNAString get 3 letter 6 codons
+}
+length(DNAseq)
+
+for(i in i:nchar(DNAseq)-2){          #need to figure it out
+  print(DNAseq[i:i+2])
+}
+DNAseq[1:6]
+
+i=1
+DNAseq[i:i+2]
+DNAseq[1:3]
+for(i in seq(1,length(DNAseq)-2,by=3)){
+  print(paste0(DNAseq[i],DNAseq[i+1],DNAseq[i+2]))
+}
+
+
