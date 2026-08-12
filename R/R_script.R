@@ -488,4 +488,5 @@ for(i in seq(1,length(DNAseq)-2,by=3)){
   print(paste0(DNAseq[i],DNAseq[i+1],DNAseq[i+2]))
 }
 
-
+v=1
+typeof(v)
