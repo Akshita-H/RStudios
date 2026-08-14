@@ -488,3 +488,55 @@ for(i in seq(1,length(DNAseq)-2,by=3)){
   print(paste0(DNAseq[i],DNAseq[i+1],DNAseq[i+2]))
 }
 
+# 13th Aug 2026
+
+library(Biostrings)
+DNAseq <- DNAString("GTACGTCATACGTCGATGTCTAGCACTAG")
+length(DNAseq)
+subseq(DNAseq, 3:(length(DNAseq)-6), 6:length(DNAseq))
+subseq(DNAseq, 3:6, 6:9)
+
+codons_set1 <- codons(DNAseq)
+codons_set2 <- codons(DNAseq[2:length(DNAseq)])
+codons_set3 <- codons(DNAseq[3:length(DNAseq)])
+print(codons_set1)
+print(codons_set2)
+print(codons_set3)
+codons_set1 == DNAString("ATG")
+head(codon_counts)
+
+# 14th Aug 2026
+
+if (!require("BiocManager", quietly = TRUE))
+  install.packages("BiocManager")
+
+library(Biostrings)
+library(ShortRead)
+BiocManager::install("ShortRead", force= TRUE)
+getwd()
+setwd("~/Downloads")
+setwd("~/Documents/RStudios")
+
+my_seqs <- DNAStringSet(c("ATCGTCAGCAGTGCA", "CATGTGACGACTCTACTG"))
+names(my_seqs) <- c("Seq1_geneA", "Seq2_geneB")
+
+writeXStringSet(my_seqs, filepath = "test.fasta")
+
+
+# Reading a fasta file
+DNAseq <- readDNAStringSet("sequence.fasta")
+DNAseq
+names(DNAseq)
+width(DNAseq)
+first_seq <- DNAseq[(1)]
+first_seq
+
+my_reads <- ShortRead(
+  sread = DNAStringSet(c("ATGC", "CGTA")),
+  quality = BStringSet(c("IIII", "I#II")),
+  id = BStringSet(c("Read"))                  # need to complete
+)
+
+
+
+
