@@ -57,3 +57,15 @@ nuc_aln <- pairwiseAlignment(
 # Retrieve numerical alignment score
 alignment_score <- score(custom_aln)
 alignment_score
+
+# Extract aligned strings including gap characters
+aligned_pattern <- aligned(pattern(custom_aln))
+aligned_subject <- aligned(subject(custom_aln))
+
+# Inspect sequence consensus sequence matching summary
+mismatch_positions <- mismatchTable(custom_aln)
+gap_ranges         <- deletion(custom_aln) # Indel regions on subject
+
+# Summary View
+summary(custom_aln)
+
