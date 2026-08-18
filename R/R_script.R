@@ -538,5 +538,6 @@ my_reads <- ShortRead(
 )
 
 
-
+BiocManager::install("pwalign",force = TRUE)
+library(pwalign)
 
