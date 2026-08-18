@@ -1,5 +1,6 @@
 library(Biostrings)
 library(tidyverse)
+BiocManager::install("patchwork",force = TRUE)
 library(patchwork)
 
 # Set seed for reproducible simulations
@@ -64,6 +65,7 @@ calc_sliding_gc <- function(seq, window_size = 1000, step_size = 200) {
 
 # Run function
 gc_profile <- calc_sliding_gc(chromosome, window_size = 1000, step_size = 200)
+gc_profile
 
 # Plot GC Profile
 ggplot(gc_profile, aes(x = Position, y = GC_Content)) +
